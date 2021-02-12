@@ -11,8 +11,8 @@ sudo systemctl start mongod
 sudo systemctl status mongod
 #Enable the service start on every reboot
 sudo systemctl enable mongod
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-. ~/.nvm/nvm.sh
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
 nvm install node
 node -v
 npm -v

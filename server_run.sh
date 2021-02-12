@@ -1,6 +1,6 @@
 #Move to the server folder
-cd XMeme/server
+cd server
 #Install the server dependencies
-npm Install
+npm install
 #Run the server
 npm start
