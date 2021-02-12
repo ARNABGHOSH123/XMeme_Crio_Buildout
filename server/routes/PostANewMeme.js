@@ -62,7 +62,6 @@ const {Meme}  = require('../models/meme');
 router.post('',async (req,res)=> {
     let requestValidation = await validatePostRequestSyntax(req);
     if(requestValidation===true){
-        console.log('here');
         Meme.findOne({$and:[{name: req.body.name},{caption: req.body.caption},{url: req.body.url}]},function(err,userWithSameCaptionOrUrl){
             if(err || userWithSameCaptionOrUrl===null || userWithSameCaptionOrUrl===undefined || userWithSameCaptionOrUrl==={}){
                 let meme = new Meme({
