@@ -46,7 +46,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 //routes configuration for all API routes with the main backend application
 
-/**For Heroku deplyment only. */
+/**For Heroku deployment only. */
 app.get("/",(_,res)=>{
     res.send("Welcome to XMeme Backend");
 })
