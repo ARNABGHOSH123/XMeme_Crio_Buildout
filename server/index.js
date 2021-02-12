@@ -25,7 +25,7 @@ require('dotenv').config();
 const {router}  = require('./routes/routes');
 
 
-const APP_PORT = process.env.APP_PORT_NO || 8081;//default application port for API routes set to 8081
+const APP_PORT = process.env.PORT || process.env.APP_PORT_NO || 8081;//default application port for API routes set to 8081
 const SWAGGER_PORT = process.env.SWAGGER_UI_PORT_NO || 8080;//default port for Swagger UI routes set to 8080
 const app = express();
 
@@ -45,6 +45,11 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 //routes configuration for all API routes with the main backend application
+
+/**For Heroku deplyment only. */
+app.get("/",(_,res)=>{
+    res.send("Welcome to XMeme Backend");
+})
 app.use('/memes', router);
 
 //Extended: https://swagger.io/specification/

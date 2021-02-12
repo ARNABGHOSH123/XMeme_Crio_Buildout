@@ -53,8 +53,9 @@ const {Meme}  = require('../models/meme');
  *                                  
  */
 
-router.patch('/:id',(req,res)=>{
-    if(validatePatchRequestSyntax(req)){
+router.patch('/:id',async (req,res)=>{
+    let requestValidation = await validatePatchRequestSyntax(req);
+    if(requestValidation === true){
         const id = req.params.id.toString();
         Meme.findById(id,function(err,userFound){
             if(err){
