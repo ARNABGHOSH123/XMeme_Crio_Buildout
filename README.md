@@ -59,7 +59,7 @@ This will start the back-end server at port 8081 and swagger-ui at port 8080.
 4) Patch a meme (update) - /memes/<id> (PATCH)
 
 All the request validation have been added in api_config/RequestValidator.js
-Response Mappers have been added in api_config/ResponseValidator.js
+Response Mappers have been added in api_config/ResponseMapper.js
 
 ### install.sh
 
