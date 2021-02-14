@@ -25,7 +25,7 @@ require('dotenv').config();
 const {router}  = require('./routes/routes');
 
 
-const APP_PORT = process.env.PORT || process.env.APP_PORT_NO || 8081;//default application port for API routes set to 8081
+const APP_PORT = process.env.PORT || process.env.APP_PORT_NO || 8081;//default application port for API routes set to 8081. PORT is for heroku vars.
 const SWAGGER_PORT = process.env.SWAGGER_UI_PORT_NO || 8080;//default port for Swagger UI routes set to 8080
 const app = express();
 
