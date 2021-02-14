@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Getting Started with XMeme
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a meme stream application where users can create memes with image urls,name and caption.
+After posting a meme they are allowed to change either url/caption or both.Users can watch all the 
+latest 100 memes in latest first order.They can even like a meme. Play with it and enjoy. :).
 
-## Available Scripts
+## Technical stack
 
-In the project directory, you can run:
+Front-end stack:
+ - ReactJS,Material UI,bootstrap,html,css and js.
 
-### `npm start`
+Back-end stack:
+ - NodeJS and ExpressJS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Database:
+- MongoDB NoSql DB.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Production
 
-### `npm test`
+Front-end:
+https://xmeme-arnab-frontend.herokuapp.com/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Back-end:
+https://xmeme-arnab-backend.herokuapp.com/
 
-### `npm run build`
+Application may take one or two reloads before starting . They are deployed on Heroku.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Developments
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Front-end runs at:
+http://localhost:3000/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Back-end runs at:
+http://localhost:8081/
 
-### `npm run eject`
+Swagger-UI runs at:
+http://localhost:8080/swagger-ui/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Start front end
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd to the client folder and do:
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This will start the development server at port 3000.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Start back end
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+cd to the server folder and do:
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will start the back-end server at port 8081 and swagger-ui at port 8080.
 
-### Code Splitting
+### API requests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1) Get all memes - /memes (GET)
+2) Get meme by id - /memes/<id> (GET)
+3) Post a meme - /memes (POST)
+4) Patch a meme (update) - /memes/<id> (PATCH)
 
-### Analyzing the Bundle Size
+All the request validation have been added in api_config/RequestValidator.js
+Response Mappers have been added in api_config/ResponseValidator.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### install.sh
 
-### Making a Progressive Web App
+This file contains all the commands to install the required dependencies for the backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### server_run.sh
 
-### Advanced Configuration
+This file contains all the commands to make the server up and running
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### sleep.sh
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This file has a single command to wait for 60 seconds for the server to come in working condition
