@@ -21,10 +21,10 @@ Database:
 ### Production
 
 Front-end:
-https://xmeme-arnab-frontend.herokuapp.com/
+https://xmeme-arnab-frontend.netlify.app
 
 Back-end:
-https://xmeme-arnab-backend.herokuapp.com/
+https://xmeme-backend-iqy0.onrender.com
 
 Application may take one or two reloads before starting . They are deployed on Heroku.
 
