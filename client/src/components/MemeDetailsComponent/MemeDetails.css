@@ -1,37 +1,37 @@
 /*All css for MemeDetails component to be added here*/
-@media only screen and (min-width: 601px){
-    .card-img-top:hover{
-        transform: scale(1.2);
-    }
+@media only screen and (min-width: 601px) {
+  .card-img-top:hover {
+    transform: scale(1.2);
+  }
 }
-.card{
-    width: 100%;
-    margin: 1rem 0;
-    border-radius: 25px !important;
-}
-
-.card:hover{
-    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253) !important;
+.card {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 25px !important;
 }
 
-.card-text{
-    font-size: .9rem;
-    padding-top: 1rem;
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
 }
 
-.overflow{
-    overflow: hidden;
+.card-text {
+  font-size: 0.9rem;
+  padding-top: 1rem;
 }
-.card-img-top{
-    transform: scale(1);
-    transition: transform 0.5s ease;
+
+.overflow {
+  overflow: hidden;
 }
-.img-thumbnail{
-    padding-top: 1% !important;
-    min-height: 20vh !important;
-    max-height: 70vh !important;
-    overflow: hidden !important;
-    object-fit: fill !important;
-    border: 0 none !important;
-    box-shadow: none !important;
+.card-img-top {
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.img-thumbnail {
+  padding-top: 1% !important;
+  min-height: 20vh !important;
+  max-height: 70vh !important;
+  overflow: hidden !important;
+  object-fit: fill !important;
+  border: 0 none !important;
+  box-shadow: none !important;
 }
